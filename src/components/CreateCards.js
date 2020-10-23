@@ -1,7 +1,6 @@
 import Card from "./Cards";
 import data from "../flashcards";
 import React, {useState} from "react";
-import {Button} from "react-bootstrap";
 
 function CreateCards() {
     const [index, setIndex] = useState(1)

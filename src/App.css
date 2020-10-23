@@ -50,6 +50,10 @@ html, body {
     transition: 0.2s;
 }
 
+.card:hover {
+    cursor: pointer;
+}
+
 @media (max-width: 600px) {
     .card {
         width: 25em;

@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+html, body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    line-height: 1.666;
+    background: #c0d2d4;
+    color: #555;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+    font-family: roboto, serif;
+    font-weight: 300;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+* {
+    position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    font-size: 4em;
 }
 
-.App-link {
-  color: #61dafb;
+.wrapper {
+    width: 100%;
+    height: 100vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F1F1F1;
+    margin: 0 auto;
+    padding: 0 2em;
+}
+
+.card {
+    width: 47em;
+    height: 21em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    box-shadow: 2px 3px 23px rgba(0, 0, 0, .1);
+    padding: 1em 1em;
+    transform-style: preserve-3d;
+    transition: 0.2s;
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 25em;
+    }
+}
+
+@media (max-height: 823px) {
+    .card {
+        margin-top: 2em;
+    }
+}
+
+.card__content--front {
+    animation: fadeInUp 0.5s;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.card__content--back {
+    animation: fadeIn 0.6s;
+    line-height: 1.3;
+    width: 700px;
+    height: 300px;
+    font-weight: 300;
+    overflow-y: scroll;
+    text-align: center;
+    justify-content: center;
+}
+
+span.back {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    font-size: large;
+
+}
+
+.card__next-button {
+    margin-left: 0.5em;
+    cursor: pointer;
+    padding: 0.5em 0.75em;
+    background: #c0d2d4;
+    color: black;
+    transition: 0.2s;
+    width: 8em;
+    height: 4em;
+}
+
+.card__next-button:hover {
+    opacity: 0.5;
+}
+
+
+.card__prev-button {
+    margin-right: 0.5em;
+    cursor: pointer;
+    padding: 0.5em 0.75em;
+    background: #c0d2d4;
+    color: black;
+    transition: 0.2s;
+    width: 8em;
+    height: 4em;
+}
+
+.card__prev-button:hover {
+    opacity: 0.5;
+}
+
+.card-container__button-wrapper {
+    padding: 1em 0;
+    margin-top: 1em;
+    text-align: center;
+
 }
